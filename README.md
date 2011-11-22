@@ -21,5 +21,7 @@ Usage:
 	user.increment_counters!([:login_attempts, :page_views]
 	user.login_attempts # => 8
 	user.page_views # => 1001
-	
+
+This is my first gem, so please give me feedback and let me know if you run into any bugs.  It's only been tested on Rails 2.3.8, but it should work on Rails 3.0 and 3.1
+
 Copyright (c) 2011 Josh Shupack
