@@ -1,18 +1,18 @@
 Gem::Specification.new do |s|
-  s.name              = "gem"
-  s.version           = "0.0.1"
+  s.name              = "rails_atomic_increment"
+  s.version           = "0.2"
   s.platform          = Gem::Platform::RUBY
-  s.authors           = ["Goncalo Silva"]
-  s.email             = ["goncalossilva@gmail.com"]
-  s.homepage          = "http://github.com/goncalossilva/gem_template"
-  s.summary           = "Sample gem"
-  s.description       = "A gem template"
+  s.authors           = ["Josh Shupack"]
+  s.email             = ["yNaught@gmail.com"]
+  s.homepage          = "http://github.com/imme5150/rails_atomic_increment"
+  s.summary           = "Adds atomic_increment! and atomic_decrement! to ActiveRecord models"
+  s.description       = "Allows you to use atomic inrement and decriment from the model instead of having to call the class.  Much more object oriented"
   s.rubyforge_project = s.name
 
   s.required_rubygems_version = ">= 1.3.6"
   
   # If you have runtime dependencies, add them here
-  # s.add_runtime_dependency "other", "~> 1.2"
+  s.add_runtime_dependency "rail", "> 2"
   
   # If you have development dependencies, add them here
   # s.add_development_dependency "another", "= 0.9"
@@ -23,7 +23,4 @@ Gem::Specification.new do |s|
   # s.extensions    = `git ls-files ext/extconf.rb`.split("\n")
   
   s.require_path = 'lib'
-
-  # For C extensions
-  # s.extensions = "ext/extconf.rb"
 end

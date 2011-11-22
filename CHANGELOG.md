@@ -1,5 +1,6 @@
-## 0.0.1 (July 10, 2010)
+## 0.2 (November 22, 2011)
 
 Features:
 
-  - initial import of this dummy gem
+  - Atomic Increment of ActiveRecord models
+  - Optimize table for ActiveRecord classes
