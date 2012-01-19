@@ -26,4 +26,4 @@ NOTE: This is designed for counters that are being updated a lot, so to decrease
 
 This is my first gem, so please give me feedback and let me know if you run into any bugs.  It's only been tested on Rails 2.3.8, but it should work on Rails 3.0 and 3.1
 
-released under the [MIT license](http://www.opensource.org/licenses/mit-license.php) Josh Shupack
+released under the [MIT license](http://www.opensource.org/licenses/mit-license.php) by Josh Shupack
