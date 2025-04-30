@@ -7,7 +7,6 @@ Gem::Specification.new do |s|
   s.homepage          = "http://github.com/imme5150/rails_atomic_increment"
   s.summary           = "Adds atomic_increment! and atomic_decrement! to ActiveRecord models"
   s.description       = "Allows you to use atomic inrement and decriment from the model instead of having to call the class.  Much more object oriented"
-  s.rubyforge_project = s.name
 
   s.required_rubygems_version = ">= 1.3.6"
   
