@@ -26,7 +26,13 @@ class ActiveRecord::Base
       raise "attribute '#{attribute}' can NOT be incremented because it was already changed and that change will be lost." if !new_record? && changed_attributes[attribute.to_s]
       self[attribute] ||= 0
       self[attribute] += value
-      @changed_attributes.delete(attribute.to_s) unless new_record? # mark this column as unchanged so it won't get updated in the DB if a save is performed on the object!
+      if !new_record? # mark this column as unchanged so it won't get updated in the DB if a save is performed on the object!
+        if @changed_attributes # Before Rails 5
+          @changed_attributes.delete(attribute.to_s)
+        else
+          clear_attribute_change(attribute)
+        end
+      end
     end
     if new_record?
       self.save
@@ -35,10 +41,4 @@ class ActiveRecord::Base
     end
     self.reload if reload # if we care about the new numbers in the db after the update
   end
-  
-  # this is for database table maintenance - May only work on MySQL? Vacuum for Postgres
-  def self.optimize_table
-    connection.execute("OPTIMIZE TABLE #{quoted_table_name}")
-  end
-  
 end
